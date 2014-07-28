@@ -1,0 +1,22 @@
+{% load django_markdown %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <title>Index Page</title>
+</head>
+
+<body>
+{% for object in object_list %}
+<div>
+  <h2>{{ object.title }}</h2>
+  <p>{{ object.created_at }}</p>
+  {{ object.body|markdown }}
+</div>
+{% endfor %}
+</body>
+
+</html>
+
+
