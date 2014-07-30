@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 Django settings for django_cms project.
 
@@ -83,3 +85,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Django 的 template loader 机制
+# https://docs.djangoproject.com/en/1.7/ref/templates/api/#template-loaders
+# * filesystem.Loader - 由 TEMPLATE_DIRS 决定
+# * app_directories.Loader - 根据 INSTALLED_APPS 里的应用目录，搜素对应目录下
+# 的 templates. 注意，比较好的做法是在 templates 下新建一个与应用名相同的目录
+# ，以作为一个前缀，以便区分不同应用下的同名模板。
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+

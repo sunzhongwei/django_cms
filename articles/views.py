@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from django.views import generic
 from . import models
 
-class ArticleIndex(generic.ListView):
-    queryset = models.Article.objects.published()
-    template_name = "home.html"
-    paginate_by = 2
+def index(request):
+    articles = models.Article.objects.all()
+    context = {"articles": articles}
+    return render(request, "articles/home.html", context)
