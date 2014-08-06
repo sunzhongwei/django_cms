@@ -1,14 +1,13 @@
 {% extends "base.html" %}
-<h2>haha</h2>
-
-{% load django_markdown %}
 
 {% block content %}
 <ul>
 {% for article in articles %}
-  <li>{{ article.title }}</li>
-  <p>{{ article.created_at }}</p>
-  {{ article.body|markdown }}
+  <li>
+    <a href="/articles/{{ article.id }}/{{ article.slug }}">
+      {{ article.title }}
+    </a>
+  </li>
 {% endfor %}
 </ul>
 {% endblock %}

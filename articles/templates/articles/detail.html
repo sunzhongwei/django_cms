@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% load django_markdown %}
+
+{% block content %}
+<h1>{{ article.title }}</h1>
+{{ article.body | markdown }}
+{% endblock %}
+

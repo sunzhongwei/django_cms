@@ -6,6 +6,15 @@ django-cms
 最后一次接触 Django 是 1.2 版本，做一个小的 CMS，看看新版本有什么新的功能，嘿嘿嘿
 
 
+安装依赖
+-------
+
+```
+$ sudo pip install https://www.djangoproject.com/download/1.7c2/tarball/
+$ sudo pip install django-markdown
+```
+
+
 初始化项目
 --------
 
