@@ -4,6 +4,14 @@
 
 {% block content %}
 <h1>{{ article.title }}</h1>
+<ul>
+  {% for tag in article.tags.all %}
+  <li>
+  <a href="/articles/tags/{{ tag.id }}"></a>
+  {{ tag.name }}
+  </li>
+  {% endfor %}
+</ul>
 {{ article.body | markdown }}
 {% endblock %}
 

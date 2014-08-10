@@ -1,7 +1,7 @@
 # ~/.tmuxinator/cms.yml
 
-name: cms
-root: ~/work/django_cms/
+project_name: cms
+project_root: ~/work/django_cms/
 
 # Optional tmux socket
 # socket_name: foo
@@ -18,7 +18,7 @@ root: ~/work/django_cms/
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
 # tmux_command: byobu
 
-windows:
+tabs:
   - editor: ls
   - shell: ls
   - server: ls 
